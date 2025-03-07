@@ -13,9 +13,13 @@ public class QuestionService {
     @Autowired
     QuestionDao questionDao;
 
-
+    // used to get all questions from the database
     public List<Question> getAllQuestions() {
         return questionDao.findAll();
 
+    }
+    // used to find all questions based on category
+    public List<Question> getQuestionByCategory(String category) {
+        return questionDao.findByCategory(category);
     }
 }
