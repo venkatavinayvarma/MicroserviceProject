@@ -22,4 +22,10 @@ public class QuestionService {
     public List<Question> getQuestionByCategory(String category) {
         return questionDao.findByCategory(category);
     }
+
+    // here we are telling dao to add values to the database
+    public String addQuestion(Question question) {
+        questionDao.save(question);
+        return "Question added successfully";
+    }
 }
