@@ -1,6 +1,6 @@
 package com.vinay.quizapp.service;
 
-import com.vinay.quizapp.Question;
+import com.vinay.quizapp.model.Question;
 import com.vinay.quizapp.dao.QuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -47,7 +47,7 @@ public class QuestionService {
         catch (Exception e){
             e.printStackTrace();
         }
-        return new ResponseEntity<>("", HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>("", HttpStatus.CREATED);
 
     }
 
